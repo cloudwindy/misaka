@@ -1,0 +1,30 @@
+block var
+html(lang="zh_CN")
+  head
+  meta(charset="utf-8")
+  meta(name="viewport" content="width=device-width, initial-scale=1, user-scalable=no")
+  title #{title} | #{site}
+  link(rel="stylesheet" href=base + "assets/css/reset.css")
+  link(rel="stylesheet" href=base + "assets/css/font-awesome.css")
+  link(rel="stylesheet" href=base + "assets/css/common.css")
+  link(rel="stylesheet" href=base + "assets/css/box.css")
+  script(src=base + "assets/js/common.js" defer)
+  block head
+  body
+  header
+    nav#navmain
+      a(href="/") 首页
+      - if (session && session.username)
+        a(href="/chat") 会话
+        a(href="/register") 注册
+        a.right(href="/logout") 退出
+        a.right(href="/info")= session.username
+      - if (!session || !session.username)
+        a.right(href="/login") 登录
+      a.menu(href="javascript:void(0);" onclick="responsive();"): i.fa.fa-bars
+  main
+    div#root
+      block content
+  footer#mainfooter Powered by Misaka Server
+    span.right #{new Date().toLocaleString('zh-CN')}
+  block script

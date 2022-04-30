@@ -1,0 +1,13 @@
+{
+  "name": "@misaka/app",
+  "version": "1.0.0",
+  "description": "Application launcher for Misaka Server",
+  "main": "app.ts",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "cloudwindy",
+  "license": "MIT"
+}

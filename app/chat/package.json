@@ -1,0 +1,18 @@
+{
+  "name": "chat",
+  "version": "1.0.0",
+  "description": "Cloudwindy Chat Project",
+  "main": "chat.ts",
+  "type": "module",
+  "author": "cloudwindy",
+  "license": "MIT",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.1.1",
+    "koa-bodyparser": "^4.3.0",
+    "pug": "^3.0.2"
+  },
+  "devDependencies": {
+    "@types/koa-bodyparser": "^4.3.7",
+    "@types/pug": "^2.0.6"
+  }
+}

@@ -1,0 +1,20 @@
+extends layout.pug
+
+block var 
+  - var title="会话"
+
+block head
+  link(rel="stylesheet" href=base + "assets/css/chatbox.css")
+
+block content
+  h1 会话
+  article(role="main" class="chatbox")
+    header
+      h2 主要会话
+    section
+      article
+    footer
+      textarea(placeholder="内容" type="text" id="message" name="message")
+      button(id="message-send")
+        img(src=base + "assets/send.svg")
+        span 发送

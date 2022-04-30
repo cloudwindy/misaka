@@ -1,0 +1,12 @@
+{
+  "name": "@misaka/util",
+  "version": "1.0.0",
+  "description": "Helper classes for Misaka Server",
+  "main": "util.ts",
+  "type": "module",
+  "author": "cloudwindy",
+  "license": "MIT",
+  "dependencies": {
+    "randomstring": "^1.2.2"
+  }
+}

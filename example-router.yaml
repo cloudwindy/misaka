@@ -1,0 +1,9 @@
+router:
+  https: true
+  verbose: true
+  routes:
+    [127.0.0.1, 127.0.0.2]:
+      /test,/test2:
+        echo: yes
+      ^/:
+        proxy: http://127.0.0.1:8080

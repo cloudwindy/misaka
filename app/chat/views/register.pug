@@ -1,0 +1,21 @@
+extends layout.pug
+
+block var
+  - var title="注册"
+
+block content
+  h1 注册
+  article(role="main" class="box")
+    header
+      h2 新建用户
+    section
+      - if (message)
+        p(class="failed")= message
+      form(method="POST" action="#")
+        div
+          label(for="username") 用户名
+          input(name="username" required autofocus)
+        div
+          label(for="password") 密码
+          input(type="password" name="password" autocomplete="new-password" required)
+        button: img(src=base + 'assets/right.svg')

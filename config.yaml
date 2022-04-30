@@ -1,0 +1,75 @@
+server:
+  user: www-data
+  group: www-data
+  http:
+    enabled: true
+    listen: 0.0.0.0
+    port: 80
+  https:
+    enabled: true
+    port: 443
+    cert: /etc/letsencrypt/live/exmaple.com/fullchain.pem
+    key: /etc/letsencrypt/live/exmaple.com/privkey.pem
+  h2:
+    enabled: true
+  ws:
+    enabled: true
+
+info:
+  name: exmaple.com
+  admin: admin
+  email: admin@exmaple.com
+
+http:
+  proxy: true
+  error: true
+  logger: true
+  ratelimit:
+    enabled: true
+    max: 600
+    duration: 60
+    whitelist:
+      - 127.0.0.1
+  headers:
+    hsts:
+      enabled: true
+      maxAge: 63072000
+      subDomains: true
+      preload: true
+    custom:
+      Server: Misaka/1.0
+      X-Powered-By: Arigatou, Sekai
+
+router:
+  routes:
+    # production
+    /^www\.example\.com$|^example\.com$/:
+      /api/websocket:
+        proxy:
+          upstream: http://127.0.0.1:8080
+          websocket: true
+          nolog: true
+      /api/backend:
+        rewrite:
+          - [/api/backend, /json]
+        proxy:
+          upstream: http://127.0.0.1:8081
+          websocket: true
+          nolog: true
+      ^/static:
+        static:
+          root: /var/www/
+          base: /static
+          browse: true
+      /:
+        app: chat
+    www.example.com:
+      ^/:
+        redirect: https://example.com
+    console.example.com:
+      ^/:
+        proxy: http://127.0.0.1:9081
+    # developement
+    /127\.0\.0\.1|192\.168\.1\.100/:
+      /:
+        app: chat

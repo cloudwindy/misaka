@@ -1,0 +1,19 @@
+{
+  "name": "@misaka/proxy",
+  "version": "1.0.0",
+  "description": "Proxy handler for Misaka Server",
+  "main": "proxy.ts",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "proxy",
+    "misaka"
+  ],
+  "author": "cloudwindy",
+  "license": "MIT",
+  "dependencies": {
+    "raw-body": "^2.5.1"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "name": "@misaka/router",
+  "version": "1.0.0",
+  "description": "Mizuki Router for Misaka Server",
+  "main": "router.ts",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "misaka",
+    "router",
+    "http"
+  ],
+  "author": "cloudwindy",
+  "license": "MIT",
+  "dependencies": {
+    "@koa/router": "^10.1.1"
+  },
+  "devDependencies": {
+    "@types/koa__router": "^8.0.11"
+  }
+}

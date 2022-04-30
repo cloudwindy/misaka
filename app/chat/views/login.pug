@@ -1,0 +1,21 @@
+extends layout.pug
+
+block var 
+  - var title="登录"
+
+block content
+  h1 登录
+  article(role="main" class="box")
+    header
+      h2 认证
+    section
+      - if (message)
+        p(class="failed")= message
+      form(method="POST" action="#")
+        div
+          label(for="username") 用户名
+          input(name="username" required autofocus)
+        div
+          label(for="password") 密码
+          input(name="password" type="password" autocomplete="current-password" required)
+        button: img(src=base + 'assets/right.svg')

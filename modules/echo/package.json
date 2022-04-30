@@ -1,0 +1,17 @@
+{
+  "name": "@misaka/echo",
+  "version": "1.0.0",
+  "description": "HTTP echo for Misaka Server",
+  "main": "echo.ts",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "hello",
+    "misaka",
+    "http"
+  ],
+  "author": "cloudwindy",
+  "license": "MIT"
+}

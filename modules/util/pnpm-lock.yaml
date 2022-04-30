@@ -1,0 +1,32 @@
+lockfileVersion: 5.3
+
+specifiers:
+  randomstring: ^1.2.2
+
+dependencies:
+  randomstring: registry.npmmirror.com/randomstring/1.2.2
+
+packages:
+
+  registry.nlark.com/array-uniq/1.0.2:
+    resolution: {integrity: sha1-X8w3OSB3VyPP1k1lxkvvU7+eum0=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/array-uniq/download/array-uniq-1.0.2.tgz}
+    name: array-uniq
+    version: 1.0.2
+    engines: {node: '>=0.10.0'}
+    dev: false
+
+  registry.npmmirror.com/randombytes/2.0.3:
+    resolution: {integrity: sha512-lDVjxQQFoCG1jcrP06LNo2lbWp4QTShEXnhActFBwYuHprllQV6VUpwreApsYqCgD+N1mHoqJ/BI/4eV4R2GYg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/randombytes/download/randombytes-2.0.3.tgz}
+    name: randombytes
+    version: 2.0.3
+    dev: false
+
+  registry.npmmirror.com/randomstring/1.2.2:
+    resolution: {integrity: sha512-9FByiB8guWZLbE+akdQiWE3I1I6w7Vn5El4o4y7o5bWQ6DWPcEOp+aLG7Jezc8BVRKKpgJd2ppRX0jnKu1YCfg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/randomstring/-/randomstring-1.2.2.tgz}
+    name: randomstring
+    version: 1.2.2
+    hasBin: true
+    dependencies:
+      array-uniq: registry.nlark.com/array-uniq/1.0.2
+      randombytes: registry.npmmirror.com/randombytes/2.0.3
+    dev: false

@@ -1,0 +1,16 @@
+extends layout.pug
+
+block var
+  - var title="退出"
+
+block content
+  h1 退出
+  article.box(role="main")
+    header
+      h2 确认
+    section
+      - if (message)
+        p.failed= message
+      p 您确定要退出登录吗？
+      form(method="POST" action="#")
+        button: img(src=base + 'assets/right.svg')

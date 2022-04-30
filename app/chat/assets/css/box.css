@@ -1,0 +1,51 @@
+.box {
+    margin: 1rem auto 0;
+    max-width: 400px;
+}
+
+.box header {
+    text-align: center;
+    background-color: var(--primary-color);
+    padding: 1rem;
+    border-top-left-radius: var(--primary-radius);
+    border-top-right-radius: var(--primary-radius);
+}
+
+.box section {
+    background-color: white;
+    padding: 1rem 0;
+    border-bottom-left-radius: var(--primary-radius);
+    border-bottom-right-radius: var(--primary-radius);
+}
+
+.box p {
+    text-align: center;
+    padding-bottom: .7rem;
+}
+
+.box section div {
+    width: 250px;
+    margin: .5rem auto 1.5rem auto;
+}
+
+.box section label {
+    display: block;
+    padding-bottom: .3rem;
+}
+
+.box section input:not([type=file]) {
+    display: block;
+    width: 100%;
+    border: 2px solid var(--primary-color);
+    border-radius: var(--secondary-radius);
+}
+
+.box section button {
+    display: block;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    padding: 10px 10px 10px 12px;
+    margin: 0 auto;
+    background-color: var(--primary-color);
+}

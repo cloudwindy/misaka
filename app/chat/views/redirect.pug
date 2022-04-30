@@ -1,0 +1,15 @@
+extends layout.pug
+
+block var
+  - var title="操作成功"
+
+block content
+  h1 操作成功
+  article(role="main" class="box")
+    header
+      h2 信息
+    section
+      p 操作成功，您很快将会跳转
+
+block script
+  script!= "setTimeout(() => { document.location = '" + location + "'; }, 2000);"
